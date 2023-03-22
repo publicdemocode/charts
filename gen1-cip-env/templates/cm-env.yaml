@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: ns-{{ .Values.prefix }}-{{ .Values.appname }}
+  name: cm1
+data:
+  {{ .Values.key1 }}: {{ .Values.val1 }}
+  {{ .Values.key2 }}: {{ .Values.val2 }}
+  {{ .Values.key3 }}: {{ .Values.val3 }}
+  {{ .Values.key4 }}: {{ .Values.val4 }}
+  {{ .Values.key5 }}: {{ .Values.val5 }}
+  {{ .Values.key6 }}: {{ .Values.val6 }}
+  {{ .Values.key7 }}: {{ .Values.val7 }}
+  {{ .Values.key8 }}: {{ .Values.val8 }}
+  {{ .Values.key9 }}: {{ .Values.val9 }}
+  {{ .Values.key10 }}: {{ .Values.val10 }}

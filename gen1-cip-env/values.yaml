@@ -1,0 +1,40 @@
+
+
+prefix: app1
+appname: web1
+
+cntname: cnt1
+image: docker.io/library/nginx:1.23.3
+cntport: 80
+
+portrpotocol: TCP
+
+key1: key1
+val1: val1
+
+key1: key2
+val1: val2
+
+key1: key3
+val1: val3
+
+key1: key4
+val1: val4
+
+key1: key5
+val1: val5
+
+key1: key6
+val1: val6
+
+key1: key7
+val1: val7
+
+key1: key8
+val1: val8
+
+key1: key9
+val1: val9
+
+key1: key10
+val1: val10

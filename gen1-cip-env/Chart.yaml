@@ -1,0 +1,6 @@
+apiVersion: v2
+name: gen1-cip-env
+description: Generic chart with service - cluster ip
+type: application
+version: 0.1.0
+appVersion: "0.1"
