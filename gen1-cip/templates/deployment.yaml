@@ -4,16 +4,16 @@ metadata:
   namespace: ns-{{ .Values.prefix }}-{{ .Values.appname }}
   name: deployment-{{ .Values.prefix }}-{{ .Values.appname }}
   labels:
-    app: app-{{ .Values.apptype }}-{{ .Values.appname }}
+    app: app-{{ .Values.prefix }}-{{ .Values.appname }}
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: app-{{ .Values.apptype }}-{{ .Values.appname }}
+      app: app-{{ .Values.prefix }}-{{ .Values.appname }}
   template:
     metadata:
       labels:
-        app: app-{{ .Values.apptype }}-{{ .Values.appname }}
+        app: app-{{ .Values.prefix }}-{{ .Values.appname }}
     spec:
       containers:
       - name: {{ .Values.cntname }}

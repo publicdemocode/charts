@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: "ns-{{ .Values.prefix }}-{{ .Values.appname }}"
-  name: "svc-{{ .Values.prefix }}-{{ .Values.appname }}"
+  namespace: ns-{{ .Values.prefix }}-{{ .Values.appname }}
+  name: svc-{{ .Values.prefix }}-{{ .Values.appname }}
 spec:
   selector:
-    app: "app-{{ .Values.prefix }}-{{ .Values.appname }}"
+    app: app: app-{{ .Values.prefix }}-{{ .Values.appname }}
   ports:
-    - protocol: "{{ .Values.portrpotocol }}"
+    - protocol: {{ .Values.portrpotocol }}
       port: {{ .Values.cntport }}
       targetPort: {{ .Values.cntport }}
