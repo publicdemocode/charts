@@ -20,3 +20,6 @@ spec:
         image: {{ .Values.image }}
         ports:
         - containerPort: {{ .Values.cntport }}
+        envFrom:
+        - configMapRef:
+            name: cm-env

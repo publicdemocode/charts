@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   namespace: ns-{{ .Values.prefix }}-{{ .Values.appname }}
-  name: cm1
+  name: cm-env
 data:
   {{ .Values.key1 }}: {{ .Values.val1 }}
   {{ .Values.key2 }}: {{ .Values.val2 }}
