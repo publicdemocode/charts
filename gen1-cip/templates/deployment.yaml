@@ -16,7 +16,7 @@ spec:
         app: app-{{ .Values.apptype }}-{{ .Values.appname }}
     spec:
       containers:
-      - name: cnt-nginx
+      - name: {{ .Values.cntname }}
         image: {{ .Values.image }}
         ports:
-        - containerPort: 80
+        - containerPort: {{ .Values.cntport }}
