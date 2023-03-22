@@ -5,7 +5,7 @@ metadata:
   name: svc-{{ .Values.prefix }}-{{ .Values.appname }}
 spec:
   selector:
-    app: app: app-{{ .Values.prefix }}-{{ .Values.appname }}
+    app: app-{{ .Values.prefix }}-{{ .Values.appname }}
   ports:
     - protocol: {{ .Values.portrpotocol }}
       port: {{ .Values.cntport }}
