@@ -1,10 +1,10 @@
 
 
-prefix: app1
-appname: web1
+prefix: "app1"
+appname: "web1"
 
-cntname: cnt1
-image: docker.io/library/nginx:1.23.3
+cntname: "cnt1"
+image: "docker.io/library/nginx:1.23.3"
 cntport: "80"
 
 portrpotocol: "TCP"
