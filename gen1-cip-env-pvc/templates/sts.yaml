@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: ns-{{ .Values.prefix }}-{{ .Values.appname }}
+  name: deployment-{{ .Values.prefix }}-{{ .Values.appname }}
+  labels:
+    app: app-{{ .Values.prefix }}-{{ .Values.appname }}
+spec:
+  serviceName: "service-mysql1"
+  selector:
+    matchLabels:
+      app: app-{{ .Values.prefix }}-{{ .Values.appname }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-{{ .Values.prefix }}-{{ .Values.appname }}
+    spec:
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: pvc-{{ .Values.prefix }}-{{ .Values.appname }}
+      containers:
+      - name: {{ .Values.cntname }}
+        image: {{ .Values.image }}
+        ports:
+        - containerPort: {{ .Values.cntport }}
+        envFrom:
+        - configMapRef:
+            name: cm-env
+        volumeMounts:
+        - name: vol1
+          mountPath: {{ .Values.mountpath }}
+
+
